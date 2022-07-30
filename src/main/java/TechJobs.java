@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -70,7 +71,7 @@ public class TechJobs {
         }
     }
 
-    // ﻿Returns the key of the selected item from the choices Dictionary
+    //Returns the key of the selected item from the choices Dictionary
     private static String getUserSelection(String menuHeader, HashMap<String, String> choices) {
 
         int choiceIdx = -1;
@@ -121,14 +122,14 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         if (someJobs.size() < 1){
-            System.out.println("No Results");
+            System.out.printf("No Results");
 
         } else {
             for(HashMap<String, String> job: someJobs) {
-                //need to add /n for formatting
+                //need to add \n for formatting
                 System.out.println("\n*****");
                 for(Map.Entry<String, String> info : job.entrySet()) {
-                    System.out.println(info.getKey() + ": " +info.getValue());
+                    System.out.println(info.getKey() + ": " + info.getValue());
                 }
                 System.out.println("*****");
             }
