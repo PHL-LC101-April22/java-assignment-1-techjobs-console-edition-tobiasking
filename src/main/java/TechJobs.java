@@ -121,18 +121,16 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        if (someJobs.size() < 1){
+        if (someJobs.size() == 0){
             System.out.printf("No Results");
 
-        } else {
-            for(HashMap<String, String> job: someJobs) {
+        } for(HashMap<String, String> job: someJobs) {
                 //need to add \n for formatting
                 System.out.println("\n*****");
-                for(Map.Entry<String, String> info : job.entrySet()) {
-                    System.out.println(info.getKey() + ": " + info.getValue());
+                for(Map.Entry<String, String> info : job.entrySet()){
+                    System.out.println(String.format("%s: %s", info.getKey(), info.getValue()));
                 }
-                System.out.println("*****");
+                System.out.println(("*****"));
             }
         }
     }
-}
