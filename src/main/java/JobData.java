@@ -100,11 +100,11 @@ public class JobData {
 
         //collect results
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-        //case sensitive?
+        //never mind, I am no longer going to scream
         for (HashMap<String, String> job : allJobs) {
             for (String search : job.keySet()){
                 String aValue = job.get(search);
-                //more case sensitive
+                //case sensitive
                 if (aValue.toLowerCase().contains(value.toLowerCase())){
                     jobs.add(job);
                     break;
