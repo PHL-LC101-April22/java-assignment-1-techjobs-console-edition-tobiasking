@@ -98,8 +98,21 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
-        // TODO - implement this method
-        return null;
+        //collect results
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+        //case sensitive?
+        String inLowerCase = value.toLowerCase();
+
+        for (HashMap<String, String> job : allJobs) {
+            for (String column : job.values()){
+                //more case sensitive
+                if (column.toLowerCase().contains(inLowerCase)) {
+                    jobs.add(job);
+                    break;
+                }
+            }
+        }
+        return jobs;
     }
 
     /**
